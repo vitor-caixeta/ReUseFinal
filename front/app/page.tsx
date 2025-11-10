@@ -3,6 +3,7 @@ import Link from "next/link";
 import hero from "@/public/IllustrationHome/HomeTop1.png";
 import hero2 from "@/public/IllustrationHome/Illustration2Home.png";
 import ItemsShowcase from "@/components/items/ItemsShowcase"; 
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   return (
