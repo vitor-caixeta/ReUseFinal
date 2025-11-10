@@ -14,7 +14,7 @@ export type Item = {
 // Use env em prod; em dev cai para localhost
 const RAW_BASE =
   // process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080";
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://reusefinalback.versel.app";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://reuse-final-back-production.up.railway.app";
 
 
 const API_BASE = RAW_BASE.replace(/\/+$/, "");

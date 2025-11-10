@@ -20,7 +20,7 @@ async function fetchItems(): Promise<Item[]> {
   // Se houver variável NEXT_PUBLIC_API_BASE_URL, usa ela.
   const API_BASE =
     // process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080";
-    process.env.NEXT_PUBLIC_API_BASE_URL || "https://reusefinalback.vercel.app";
+    process.env.NEXT_PUBLIC_API_BASE_URL || "https://reuse-final-back-production.up.railway.app";
 
 
   try {

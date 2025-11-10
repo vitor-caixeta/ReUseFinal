@@ -12,6 +12,9 @@ dotenv.config();
 const app = express();
 const prisma = new PrismaClient();
 
+const getErrorMessage = (e: unknown) =>
+  e instanceof Error ? e.message : "Erro interno";
+
 // CORS
 app.use(
   cors({
@@ -195,8 +198,13 @@ app.put("/items/:id", auth, async (req, res) => {
     });
 
     res.json(updated);
-  } catch (e) {
-    console.error("Erro ao atualizar item:", e.message, e.stack);
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      console.error("Erro ao atualizar item:", e.message, e.stack);
+      return res.status(500).json({ error: e.message });
+    }
+    console.error("Erro ao atualizar item:", e);
+    return res.status(500).json({ error: "Erro ao atualizar item" });
   }
 });
 
