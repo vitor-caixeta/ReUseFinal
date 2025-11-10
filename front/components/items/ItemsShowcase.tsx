@@ -1,5 +1,6 @@
 import ItemsGridClient from "./ItemsShowcaseClient";
 import type { Item } from "@/types/item";
+export const dynamic = "force-dynamic";
 
 function normalizeItem(it: any): Item {
   return {

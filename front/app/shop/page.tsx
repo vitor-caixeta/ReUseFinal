@@ -1,5 +1,6 @@
 // app/shop/page.tsx
 import ShopClient from "@/components/shop/ShopClient";
+export const dynamic = "force-dynamic";
 
 export type Item = {
   id: number;
